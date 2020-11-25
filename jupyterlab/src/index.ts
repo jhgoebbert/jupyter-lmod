@@ -246,7 +246,6 @@ async function setup_proxy_commands() {
   for (let server_process of data.server_processes) {
 
     let urlfile = '';
-    const url = PageConfig.getBaseUrl() + server_process.name + '/';
     if (server_process.launcher_entry.urlfile) {
        urlfile =  server_process.launcher_entry.urlfile;
     }
