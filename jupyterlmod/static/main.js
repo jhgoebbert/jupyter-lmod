@@ -316,10 +316,14 @@ define(function(require) {
                 .addClass('new-' + server_process.name);
 
             /* create our list item's link */
+            let urlfile = '';
+            if (server_process.launcher_entry.urlfile) {
+                urlfile =  server_process.launcher_entry.urlfile;
+            }
             let entry_link = $('<a>')
                 .attr('role', 'menuitem')
                 .attr('tabindex', '-1')
-                .attr('href', base_url + server_process.name + '/')
+                .attr('href', base_url + server_process.name + '/' + urlfile)
                 .attr('target', '_blank')
                 .text(server_process.launcher_entry.title);
 
